@@ -1,0 +1,22 @@
+.container.calendar-bookings[ng-controller="DashboardCalendarController"]
+  h5 Select the days you're genarally free to host during the weeks:
+  .row
+    .col-sm-4
+      table.explication-table
+        tr
+          td.bg-green#td-mon[ng-click="weekday_Click('MON')"] Mon 
+          td.bg-green#td-tue[ng-click="weekday_Click('TUE')"] Tue 
+          td.bg-green#td-wed[ng-click="weekday_Click('WED')"] Web 
+          td.bg-green#td-thu[ng-click="weekday_Click('THU')"] Thu 
+          td Fri
+          td Sat
+          td Sun 
+    .col-sm-3
+      .legend-group.legend-available
+        .bg-green
+        .legend-note available
+      .legend-group.legend-not-available
+        .bg-white
+        .legend-note not available
+  h5 Select specific dates you are avalable to host:
+  #calendar-dashboard[append-calendar data="{{shows}}" showid="{{showId}}"]
